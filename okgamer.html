@@ -23,11 +23,11 @@
       <div class="large-12 columns">
         <div class="nav-bar right">
          <ul class="button-group">
-           <li><a href="http://michael-james-cooley.herokuapp.com/okgamer" class="button">Current Project</a></li>
-           <li><a href="http://michael-james-cooley.herokuapp.com/resume" class="button">Resume</a></li>
+           <li><a href="/home/mike/sandbox2/okgamer.html" class="button">Current Project</a></li>
+           <li><a href="/home/mike/sandbox2/resume.html" class="button">Resume</a></li>
           </ul>
         </div>
-        <h1><small><a href="http://michael-james-cooley.herokuapp.com/okgamer">Michael James Cooley</a></small></h1>
+        <h1><small><a href="/home/mike/sandbox2/index.html">Michael James Cooley</a></small></h1>
         <hr />
       </div>
     </div>
@@ -52,19 +52,19 @@
     <div id="slider">
       <ul data-orbit>
         <li>
-          <%= image_tag("http://i.imgur.com/gK6uUSu.jpg") %>
+          <img src="http://i.imgur.com/gK6uUSu.jpg">
           <div class="orbit-caption">This is the splash page that a user sees before they log in</div>
         </li>
         <li>
-          <%= image_tag("http://i.imgur.com/zXLiGIH.jpg") %>
+          <img scr="http://i.imgur.com/zXLiGIH.jpg">
           <div class="orbit-caption">After a user signs up they give their Xbox Live Gamertag and answer a short quiz</div>
         </li>
         <li>
-          <%= image_tag("http://i.imgur.com/xjXJndI.jpg") %>
+          <img src="http://i.imgur.com/xjXJndI.jpg">
           <div class="orbit-caption">At which point they are matched with other users based on their answers to the above quiz</div>
         </li>
         <li>
-          <%= image_tag("http://i.imgur.com/oYxn3r9.jpg") %>
+          <img src="http://i.imgur.com/oYxn3r9.jpg">
           <div class="orbit-caption">A user can then send a message to his or her matches to set up team formation</div>
         </li>
       </ul>
@@ -95,6 +95,44 @@
         </div>
       </div>
     </footer>
+
+<div id="tgmp">
+  <div class="row">
+    <a href="#" class="expand-toggle hide-for-small btn tips" title="show/hide video player"><i class="icon-chevron-up"></i></a>
+    <a href="#" class="prev btn"><i class="icon-backward"></i></a>
+    <a href="#" class="play btn"><i class="icon-play"></i></a>
+    <a href="#" class="next btn"><i class="icon-forward"></i></a>
+    <!--a href="#" class="hide-for-small btn right"><i class="icon-info"></i></a-->
+    <a href="#" class="hide-for-small btn right playliststip"><i class="icon-list-ul"></i></a>
+    <a href="#" class="hide-for-small btn right listen-live-link tips" title="Listen Live"><i class="icon-microphone"></i></a>
+    <div class="frame">
+      <div class="top">
+        <i style="display:none;">Click Play to Listen Live</i>
+        <strong>&nbsp;</strong>
+        <span>&nbsp;</span>
+      </div>
+      <div class="line-holder hide-for-small">
+        <div class="time"><span class="currtime">0:00</span>&nbsp;/&nbsp;<span class="timeleft">0:00</span></div>
+        <div class="line"><span style="width:0%;">&nbsp;</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="tgmp-tray">
+  <div class="content row">
+    <div class="large-12 small-12 columns">
+      <div class="large-8 push-4 columns">
+        <div class="text-right closebox"><a class="close" href="#"><i class="icon-remove"></i></a></div>
+        <div id="ytplayer" class="flex-video widescreen vimeo"></div>
+      </div>
+      <div class="large-4 pull-8 columns leftcolumn">
+        <p>No playlist or video currently playing...</p>
+      </div>
+
+      
+    </div>
+  </div>
+</div>
 
   <script>
   document.write('<script src=' +
@@ -136,7 +174,12 @@
 	
   
   <script>
-    $(document).foundation();
+    $(document).foundation('orbit', {
+      animation_speed: 500,
+      slide_number: false,
+      timer_speed: 999990000,
+      timer: false
+    });
   </script>
 </body>
 </html>
