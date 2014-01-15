@@ -1,20 +1,19 @@
 
 .resume {
   font-family:Helvetica;
+  .something {
+	  margin-bottom:0;
+	  font-weight:bold;
+	}
+	.connector_text {
+	  font-weight:normal;
+	}
 }
 
 h2 {
   text-align: center;
 }
 
-.something {
-  margin-bottom:0;
-  font-weight:bold;
-}
-
-.connector_text {
-  font-weight:normal;
-}
 div {
   border-radius: 1px;
 }
