@@ -58,9 +58,9 @@ $tgmp-dark-color: #383c42;
 	-webkit-box-shadow: 0 -2px 2px 0 #ccc;
 	-moz-box-shadow: 0 -2px 2px 0 #ccc;
 	background: $tgmp-back-color;
-	@media (min-width:1000px) {
+	/*@media (min-width:900px) {
 		padding-left:25%;
-	}
+	}*/
 	.btn {
 		float: left;
 		padding: em-calc(13) em-calc(12) em-calc(10) em-calc(12);
@@ -133,11 +133,14 @@ $tgmp-dark-color: #383c42;
 			}
 		}
 	}
-	.row {
-		margin:0;
-	}
+/*	.row {
+		margin: 0;
+	}*/
 	div {
-		text-align:center;
+		max-width:1000px;
+		position:relative;
+		margin:0 auto;
+		padding: 0 5px 0 5px;
 	}
 }
 #tgmp-tray {
